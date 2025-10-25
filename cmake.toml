@@ -72,7 +72,6 @@ headers = [
 link-libraries = [
     "zasm::common",
     "zasm::zasm",
-    "zasm::testdata",
     "benchmark::benchmark",
 ]
 [target.zasm_benchmarks.properties]
