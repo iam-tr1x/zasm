@@ -30,7 +30,6 @@ headers = [
     "zasm/include/**.hpp",
 ]
 include-directories = ["zasm/include"]
-public-headers = ["zasm/include/**.hpp"]
 private-include-directories = ["${ZYDIS_INCLUDE_DIR}"]
 link-libraries = [
     "zasm::common",
@@ -201,6 +200,54 @@ RUNTIME_OUTPUT_NAME = "example.memory_operands"
 condition = "build-tests"
 name = "tests"
 command = "$<TARGET_FILE:zasm_tests>"
+
+[[install]]
+destination = "include/zasm"
+files = [
+    "zasm/include/zasm/base/immediate.hpp", 
+    "zasm/include/zasm/base/instruction.hpp",
+    "zasm/include/zasm/base/label.hpp",
+    "zasm/include/zasm/base/memory.hpp",
+    "zasm/include/zasm/base/meta.hpp",
+    "zasm/include/zasm/base/mode.hpp",
+    "zasm/include/zasm/base/operand.hpp",
+    "zasm/include/zasm/base/register.hpp",
+    "zasm/include/zasm/core/bitsize.hpp",
+    "zasm/include/zasm/core/enumflags.hpp",
+    "zasm/include/zasm/core/errors.hpp",
+    "zasm/include/zasm/core/expected.hpp",
+    "zasm/include/zasm/core/filestream.hpp",
+    "zasm/include/zasm/core/math.hpp",
+    "zasm/include/zasm/core/memorystream.hpp",
+    "zasm/include/zasm/core/objectpool.hpp",
+    "zasm/include/zasm/core/packed.hpp",
+    "zasm/include/zasm/core/stream.hpp",
+    "zasm/include/zasm/core/stringpool.hpp",
+    "zasm/include/zasm/core/strongtype.hpp",
+    "zasm/include/zasm/decoder/decoder.hpp",
+    "zasm/include/zasm/encoder/encoder.hpp",
+    "zasm/include/zasm/formatter/formatter.hpp",
+    "zasm/include/zasm/program/align.hpp",
+    "zasm/include/zasm/program/data.hpp",
+    "zasm/include/zasm/program/embeddedlabel.hpp",
+    "zasm/include/zasm/program/instruction.hpp",
+    "zasm/include/zasm/program/labeldata.hpp",
+    "zasm/include/zasm/program/node.hpp",
+    "zasm/include/zasm/program/observer.hpp",
+    "zasm/include/zasm/program/program.hpp",
+    "zasm/include/zasm/program/saverestore.hpp",
+    "zasm/include/zasm/program/section.hpp",
+    "zasm/include/zasm/program/sentinel.hpp",
+    "zasm/include/zasm/serialization/serializer.hpp",
+    "zasm/include/zasm/x86/assembler.hpp",
+    "zasm/include/zasm/x86/emitter.hpp",
+    "zasm/include/zasm/x86/memory.hpp",
+    "zasm/include/zasm/x86/meta.hpp",
+    "zasm/include/zasm/x86/mnemonic.hpp",
+    "zasm/include/zasm/x86/register.hpp",
+    "zasm/include/zasm/x86/x86.hpp",
+    "zasm/include/zasm/zasm.hpp",
+]
 
 [[install]]
 destination = "lib"
