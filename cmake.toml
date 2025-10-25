@@ -202,7 +202,7 @@ name = "tests"
 command = "$<TARGET_FILE:zasm_tests>"
 
 [[install]]
-destination = "include/zasm"
+destination = "include"
 files = [
     "zasm/include/zasm/base/immediate.hpp", 
     "zasm/include/zasm/base/instruction.hpp",
