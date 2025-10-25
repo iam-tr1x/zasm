@@ -203,7 +203,8 @@ command = "$<TARGET_FILE:zasm_tests>"
 
 [[install]]
 destination = "include"
-directory = ["zasm/include/zasm"]
+files = ["zasm/include/zasm/**.hpp"]
+strip-prefix = "zasm/include/"
 
 [[install]]
 destination = "lib"
