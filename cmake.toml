@@ -30,6 +30,7 @@ headers = [
     "zasm/include/**.hpp",
 ]
 include-directories = ["zasm/include"]
+private-include-directories = ["${ZYDIS_INCLUDE_DIR}"]
 link-libraries = [
     "zasm::common",
     "Zydis",
