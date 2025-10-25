@@ -201,3 +201,12 @@ RUNTIME_OUTPUT_NAME = "example.memory_operands"
 condition = "build-tests"
 name = "tests"
 command = "$<TARGET_FILE:zasm_tests>"
+
+[install.zasm_headers]
+destination = "include"
+files = ["zasm/include/**.hpp"]
+
+[install.zasm_libraries]
+destination = "lib"
+targets = ["zasm", "zasm_common"]
+exports = "zasmTargets"
