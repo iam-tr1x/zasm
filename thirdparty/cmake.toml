@@ -7,19 +7,23 @@ BENCHMARK_ENABLE_TESTING = false
 BENCHMARK_ENABLE_INSTALL = false
 BENCHMARK_USE_BUNDLED_GTEST = false
 
+# Conditionally fetch Zydis, GTest, and GBenchmark ONLY if we are NOT building inside vcpkg.
+# If VCPKG_PORT_NAME is set, it means vcpkg is building us, and it will handle dependencies.
+
 [fetch-content.Zydis]
-git = "https://github.com/zyantific/zydis"
+condition = "NOT DEFINED VCPKG_PORT_NAME"
+git = "https://github.com  /zyantific/zydis"
 tag = "v4.1.0"
 system = true
 
 [fetch-content.GTest]
-condition = "build-tests"
+condition = "build-tests AND NOT DEFINED VCPKG_PORT_NAME"
 git = "https://github.com/google/googletest"
 tag = "release-1.11.0"
 system = true
 
 [fetch-content.GBenchmark]
-condition = "build-benchmarks"
+condition = "build-benchmarks AND NOT DEFINED VCPKG_PORT_NAME"
 git = "https://github.com/google/benchmark"
 tag = "v1.6.1"
 system = true
