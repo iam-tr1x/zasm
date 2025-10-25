@@ -30,6 +30,7 @@ headers = [
     "zasm/include/**.hpp",
 ]
 include-directories = ["zasm/include"]
+public-headers = ["zasm/include/**.hpp"]
 private-include-directories = ["${ZYDIS_INCLUDE_DIR}"]
 link-libraries = [
     "zasm::common",
@@ -200,11 +201,6 @@ RUNTIME_OUTPUT_NAME = "example.memory_operands"
 condition = "build-tests"
 name = "tests"
 command = "$<TARGET_FILE:zasm_tests>"
-
-[[install]]
-destination = "include"
-files = ["zasm/include/zasm/**.hpp"]
-strip-prefix = "zasm/include/"
 
 [[install]]
 destination = "lib"
