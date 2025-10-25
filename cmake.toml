@@ -209,4 +209,3 @@ files = ["zasm/include/**.hpp"]
 [[install]]
 destination = "lib"
 targets = ["zasm", "zasm_common"]
-exports = "zasmTargets"
