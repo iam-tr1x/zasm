@@ -202,7 +202,7 @@ name = "tests"
 command = "$<TARGET_FILE:zasm_tests>"
 
 [[install]]
-destination = "include"
+destination = "include/zasm/base"
 files = [
     "zasm/include/zasm/base/immediate.hpp", 
     "zasm/include/zasm/base/instruction.hpp",
@@ -212,6 +212,11 @@ files = [
     "zasm/include/zasm/base/mode.hpp",
     "zasm/include/zasm/base/operand.hpp",
     "zasm/include/zasm/base/register.hpp",
+]
+
+[[install]]
+destination = "include/zasm/core"
+files = [
     "zasm/include/zasm/core/bitsize.hpp",
     "zasm/include/zasm/core/enumflags.hpp",
     "zasm/include/zasm/core/errors.hpp",
@@ -224,9 +229,29 @@ files = [
     "zasm/include/zasm/core/stream.hpp",
     "zasm/include/zasm/core/stringpool.hpp",
     "zasm/include/zasm/core/strongtype.hpp",
+]
+
+[[install]]
+destination = "include/zasm/decoder"
+files = [
     "zasm/include/zasm/decoder/decoder.hpp",
+]
+
+[[install]]
+destination = "include/zasm/encoder"
+files = [
     "zasm/include/zasm/encoder/encoder.hpp",
+]
+
+[[install]]
+destination = "include/zasm/formatter"
+files = [
     "zasm/include/zasm/formatter/formatter.hpp",
+]
+
+[[install]]
+destination = "include/zasm/program"
+files = [
     "zasm/include/zasm/program/align.hpp",
     "zasm/include/zasm/program/data.hpp",
     "zasm/include/zasm/program/embeddedlabel.hpp",
@@ -238,7 +263,17 @@ files = [
     "zasm/include/zasm/program/saverestore.hpp",
     "zasm/include/zasm/program/section.hpp",
     "zasm/include/zasm/program/sentinel.hpp",
+]
+
+[[install]]
+destination = "include/zasm/serialization"
+files = [
     "zasm/include/zasm/serialization/serializer.hpp",
+]
+
+[[install]]
+destination = "include/zasm/x86"
+files = [
     "zasm/include/zasm/x86/assembler.hpp",
     "zasm/include/zasm/x86/emitter.hpp",
     "zasm/include/zasm/x86/memory.hpp",
@@ -246,6 +281,11 @@ files = [
     "zasm/include/zasm/x86/mnemonic.hpp",
     "zasm/include/zasm/x86/register.hpp",
     "zasm/include/zasm/x86/x86.hpp",
+]
+
+[[install]]
+destination = "include/zasm"
+files = [
     "zasm/include/zasm/zasm.hpp",
 ]
 
