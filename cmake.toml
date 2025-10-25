@@ -202,11 +202,11 @@ condition = "build-tests"
 name = "tests"
 command = "$<TARGET_FILE:zasm_tests>"
 
-[install.zasm_headers]
+[[install]]
 destination = "include"
 files = ["zasm/include/**.hpp"]
 
-[install.zasm_libraries]
+[[install]]
 destination = "lib"
 targets = ["zasm", "zasm_common"]
 exports = "zasmTargets"
